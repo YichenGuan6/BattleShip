@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/MenuController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Model/SeaGrid.cs">
     <Files>
-      <File FileName="src/MenuController.cs" Line="36" Column="23" />
+      <File FileName="src/Model/SeaGrid.cs" Line="138" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.MyGameUnx PreferredExecutionTarget="MonoDevelop.Default" />
