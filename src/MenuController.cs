@@ -33,7 +33,7 @@ static class MenuController
     ///     ''' </remarks>
     private readonly static string[][] _menuStructure = new[] { new string[] { "PLAY", "SETUP", "SCORES", "QUIT" }, new string[] { "RETURN", "SURRENDER", "QUIT" }, new string[] { "EASY", "MEDIUM", "HARD" } };
 
-    private  MENU_TOP = 575;
+    private const int MENU_TOP = 575;
     private const int MENU_LEFT = 30;
     private const int MENU_GAP = 0;
     private const int BUTTON_WIDTH = 75;

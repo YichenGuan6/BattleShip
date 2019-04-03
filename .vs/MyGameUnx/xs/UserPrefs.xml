@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/HighScoreController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/MenuController.cs">
     <Files>
-      <File FileName="src/HighScoreController.cs" Line="19" Column="18" />
+      <File FileName="src/MenuController.cs" Line="36" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.MyGameUnx PreferredExecutionTarget="MonoDevelop.Default" />
