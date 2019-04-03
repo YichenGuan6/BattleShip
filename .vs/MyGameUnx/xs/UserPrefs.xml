@@ -1,5 +1,13 @@
 ﻿<Properties StartupConfiguration="{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/MenuController.cs">
+    <Files>
+      <File FileName="src/DevelopmentController.cs" Line="66" Column="39" />
+      <File FileName="src/DiscoveryController.cs" Line="70" Column="77" />
+      <File FileName="src/EndingGameController.cs" Line="63" Column="1" />
+      <File FileName="src/HighScoreController.cs" Line="153" Column="137" />
+      <File FileName="src/MenuController.cs" Line="105" Column="48" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.MyGameUnx PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Unix|AnyCPU" />
