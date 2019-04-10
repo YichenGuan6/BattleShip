@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/EndingGameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/MenuController.cs">
     <Files>
-      <File FileName="src/GameLogic.cs" Line="12" Column="1" />
-      <File FileName="src/EndingGameController.cs" Line="26" Column="22" />
+      <File FileName="src/DiscoveryController.cs" Line="66" Column="110" />
+      <File FileName="src/HighScoreController.cs" Line="152" Column="91" />
+      <File FileName="src/MenuController.cs" Line="114" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.MyGameUnx PreferredExecutionTarget="MonoDevelop.Default" />
