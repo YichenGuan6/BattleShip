@@ -28,7 +28,9 @@ static class MenuController
 			"SETUP",
 			"SCORES",
 			"QUIT",
-            "TeamInformation"
+            "TeamInformation",
+            "music",
+            "nomusic"
 		},
 		new string[] {
 			"RETURN",
@@ -60,7 +62,8 @@ static class MenuController
 
 	private const int MAIN_MENU_QUIT_BUTTON = 3;
     private const int MAIN_MENU_INF = 4;
-
+    private const int MAIN_MENU_Music = 5;
+    private const int MAIN_MENU_NOMU = 6;
     private const int SETUP_MENU_EASY_BUTTON = 0;
 	private const int SETUP_MENU_MEDIUM_BUTTON = 1;
 	private const int SETUP_MENU_HARD_BUTTON = 2;
@@ -281,8 +284,15 @@ static class MenuController
                 // SwinGame.DrawTextLinesOnScreen("yichen ---peter---david---darow", Color.White, Color.White, GameResources.GameFont("ArialLarge"), FontAlignment.AlignCenter, 10, 10, SwinGame.ScreenWidth(), SwinGame.ScreenHeight());
                 SwinGame.DrawText("yichen ---peter---david---darow", Color.White, 10, 10);
                 break;
-               
-		}
+            case MAIN_MENU_Music:
+                SwinGame.StopMusic();
+                break;
+            case MAIN_MENU_NOMU:
+                SwinGame.PlayMusic(GameResources.GameMusic("Background"));
+                break;
+
+
+        }
 	}
 
 	/// <summary>
