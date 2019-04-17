@@ -182,6 +182,46 @@ public class Player : IEnumerable<Ship>
 	internal AttackResult Shoot(int row, int col)
 	{
 		_shots += 1;
+		if (_Random.Next(0, 10) == 7) {
+            List<AttackResult> results = new List<AttackResult> ();
+            results.Add (EnemyGrid.HitTile (row, col));
+            if (row == 0 && col == 0) {
+                results.Add (EnemyGrid.HitTile (row + 1, col));
+                results.Add (EnemyGrid.HitTile (row, col + 1));
+                results.Add (EnemyGrid.HitTile (row + 1, col + 1));
+            } else if (row == 0 && col == PlayerGrid.Width - 1) {
+                results.Add (EnemyGrid.HitTile (row + 1, col));
+                results.Add (EnemyGrid.HitTile (row, col - 1));
+                results.Add (EnemyGrid.HitTile (row + 1, col - 1));
+            } else if (row == PlayerGrid.Height - 1 && col == 0) {
+                results.Add (EnemyGrid.HitTile (row - 1, col));
+                results.Add (EnemyGrid.HitTile (row, col + 1));
+                results.Add (EnemyGrid.HitTile (row - 1, col + 1));
+            } else if (row == PlayerGrid.Height - 1 && col == PlayerGrid.Width - 1) {
+                results.Add (EnemyGrid.HitTile (row - 1, col));
+                results.Add (EnemyGrid.HitTile (row, col - 1));
+                results.Add (EnemyGrid.HitTile (row - 1, col - 1));
+            } else {
+                results.Add (EnemyGrid.HitTile (row + 1, col));
+                results.Add (EnemyGrid.HitTile (row - 1, col));
+                results.Add (EnemyGrid.HitTile (row, col + 1));
+                results.Add (EnemyGrid.HitTile (row, col - 1));
+                results.Add (EnemyGrid.HitTile (row + 1, col + 1));
+                results.Add (EnemyGrid.HitTile (row - 1, col - 1));
+                results.Add (EnemyGrid.HitTile (row + 1, col - 1));
+                results.Add (EnemyGrid.HitTile (row - 1, col + 1));
+            }
+            AttackResult resultReturn = null;
+            foreach (AttackResult listResult in results) {
+                if (listResult.Value == ResultOfAttack.Destroyed || listResult.Value == ResultOfAttack.Hit) {
+                    resultReturn = listResult;
+                    _hits += 1;
+                } else if (listResult.Value == ResultOfAttack.Miss) {
+                    _misses += 1;
+                }
+            }
+            return resultReturn ?? results [0];
+        }
 		AttackResult result = default(AttackResult);
 		result = EnemyGrid.HitTile(row, col);
 
