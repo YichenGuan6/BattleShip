@@ -27,7 +27,8 @@ static class MenuController
 			"PLAY",
 			"SETUP",
 			"SCORES",
-			"QUIT"
+			"QUIT",
+            "TeamInformation"
 		},
 		new string[] {
 			"RETURN",
@@ -58,7 +59,9 @@ static class MenuController
 	private const int MAIN_MENU_TOP_SCORES_BUTTON = 2;
 
 	private const int MAIN_MENU_QUIT_BUTTON = 3;
-	private const int SETUP_MENU_EASY_BUTTON = 0;
+    private const int MAIN_MENU_INF = 4;
+
+    private const int SETUP_MENU_EASY_BUTTON = 0;
 	private const int SETUP_MENU_MEDIUM_BUTTON = 1;
 	private const int SETUP_MENU_HARD_BUTTON = 2;
 
@@ -274,6 +277,11 @@ static class MenuController
 			case MAIN_MENU_QUIT_BUTTON:
 				GameController.EndCurrentState();
 				break;
+            case MAIN_MENU_INF:
+                // SwinGame.DrawTextLinesOnScreen("yichen ---peter---david---darow", Color.White, Color.White, GameResources.GameFont("ArialLarge"), FontAlignment.AlignCenter, 10, 10, SwinGame.ScreenWidth(), SwinGame.ScreenHeight());
+                SwinGame.DrawText("yichen ---peter---david---darow", Color.White, 10, 10);
+                break;
+               
 		}
 	}
 
@@ -317,6 +325,9 @@ static class MenuController
 			case GAME_MENU_QUIT_BUTTON:
 				GameController.AddNewState(GameState.Quitting);
 				break;
-		}
+            case MAIN_MENU_INF:
+                SwinGame.DrawTextLinesOnScreen("yichen ---peter---david---darow", Color.White, Color.White, GameResources.GameFont("ArialLarge"), FontAlignment.AlignCenter, 10, 10, SwinGame.ScreenWidth(), SwinGame.ScreenHeight());
+                break;
+        }
 	}
 }

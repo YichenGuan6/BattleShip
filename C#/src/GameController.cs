@@ -332,9 +332,14 @@ public static class GameController
 			case GameState.ViewingHighScores:
 				HighScoreController.DrawHighScores();
 				break;
-		}
+            case GameState.INF:
+                HighScoreController.DrawHighScores();
+                break;
 
-		UtilityFunctions.DrawAnimations();
+
+        }
+
+        UtilityFunctions.DrawAnimations();
 
 		SwinGame.RefreshScreen();
 	}
@@ -376,5 +381,8 @@ public static class GameController
 	{
 		_aiSetting = setting;
 	}
-
+    public static void TeamINF()
+    {
+        SwinGame.DrawTextLinesOnScreen("yichen ---peter---david---darow", Color.White, Color.White, GameResources.GameFont("ArialLarge"), FontAlignment.AlignCenter, 10, 10, SwinGame.ScreenWidth(), SwinGame.ScreenHeight());
+    }
 }

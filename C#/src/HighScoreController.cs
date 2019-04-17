@@ -16,7 +16,7 @@ using SwinGameSDK;
 /// </remarks>
 static class HighScoreController
 {
-	private const int NAME_WIDTH = 3;
+	private const int NAME_WIDTH = 5;
 
 	private const int SCORES_LEFT = 490;
 	/// <summary>
@@ -135,7 +135,7 @@ static class HighScoreController
 			s = _Scores[i];
 
 			//for scores 1 - 9 use 01 - 09
-			if (i < 9) {
+			if (i < 14) {
 				SwinGame.DrawText(" " + (i + 1) + ":   " + s.Name + "   " + s.Value, Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
 			} else {
 				SwinGame.DrawText(i + 1 + ":   " + s.Name + "   " + s.Value, Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
