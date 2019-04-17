@@ -189,15 +189,15 @@ public class Player : IEnumerable<Ship>
                 results.Add (EnemyGrid.HitTile (row + 1, col));
                 results.Add (EnemyGrid.HitTile (row, col + 1));
                 results.Add (EnemyGrid.HitTile (row + 1, col + 1));
-            } else if (row == 0 && col == PlayerGrid.Width) {
+            } else if (row == 0 && col == PlayerGrid.Width - 1) {
                 results.Add (EnemyGrid.HitTile (row + 1, col));
                 results.Add (EnemyGrid.HitTile (row, col - 1));
                 results.Add (EnemyGrid.HitTile (row + 1, col - 1));
-            } else if (row == PlayerGrid.Height && col == 0) {
+            } else if (row == PlayerGrid.Height - 1 && col == 0) {
                 results.Add (EnemyGrid.HitTile (row - 1, col));
                 results.Add (EnemyGrid.HitTile (row, col + 1));
                 results.Add (EnemyGrid.HitTile (row - 1, col + 1));
-            } else if (row == PlayerGrid.Height && col == PlayerGrid.Width) {
+            } else if (row == PlayerGrid.Height - 1 && col == PlayerGrid.Width - 1) {
                 results.Add (EnemyGrid.HitTile (row - 1, col));
                 results.Add (EnemyGrid.HitTile (row, col - 1));
                 results.Add (EnemyGrid.HitTile (row - 1, col - 1));
